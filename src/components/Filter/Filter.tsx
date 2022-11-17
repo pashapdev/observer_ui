@@ -48,7 +48,7 @@ export function Filter(prop: {
     }
 
     return (
-        <Box sx={{ marginTop: "110px" }}>
+        <Box>
             <ButtonGroup color="secondary" aria-label="medium secondary button group">
                 {prop.buttonGroupVisibility.map((button: string, index: number) => (
                     <Button key={index} variant={isActive(button)} onClick={() => prop.updateFilter(button)} >{button}</Button>

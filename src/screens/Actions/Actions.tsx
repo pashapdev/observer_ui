@@ -45,7 +45,7 @@ export function Actions(prop: { }) {
   };
 
   return (
-    <Box sx={{ maxWidth: 400, marginTop: "110px" }}>
+    <Box sx={{ maxWidth: 400 }}>
       <Stepper activeStep={activeStep} orientation="vertical">
         {steps.map((step, index) => (
           <Step key={step.label}>

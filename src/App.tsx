@@ -17,12 +17,15 @@ import Box from '@mui/material/Box';
 
 import {Objects} from './screens/Objects';
 import {Actions} from './screens/Actions';
+import {ButtonsBreadcrumbs} from './components/ButtonsBreadcrumbs';
+import {Error} from './components/Error';
 
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme';
 
 import { useRecoilValue } from 'recoil';
 import { history } from './_helpers'
+import { Stack } from '@mui/system';
 
 export default function App() {
     return (
@@ -30,11 +33,12 @@ export default function App() {
             <AppBar sx={{ bgcolor: teal[500] }}>
                 <Toolbar>
                     <img src="/signature.png" style={{  position: 'absolute', left: 'calc(100% - 80px)' }} alt="signature" />
-                    <Typography variant="h4" component="div">Observer</Typography>
+                    <ButtonsBreadcrumbs links={[]}/>
                 </Toolbar>
             </AppBar>
-            {/* <Objects/> */}
-            <Actions/>
+            {/* <Objects />
+            <Actions/> */}
+            <Error errCode={404}/>
         </Container>
     );
 }
